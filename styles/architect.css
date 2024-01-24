@@ -8,6 +8,9 @@
     font-family: 'Merriweather Sans', sans-serif;
     font-family: 'Work Sans', sans-serif;
 }
+.text-light-gray{
+    color: #727272;
+}
 .btn_primary{
     color: #FFF;
     font-size: 1.25rem;
@@ -62,37 +65,16 @@ nav li a {
     color: #131313;
 }
 
-.banner_description{
-    color: #727272;
-}
+
 .banner img{
     margin-top: 20px;
     width: 100%;
 }
 
-/* Responsive media queries*/
-/*  mobile devices */
-@media screen and (max-width: 576px) {
-    header{
-        padding: 20px;
-    }   
-    nav {
-        flex-direction: column;
-    }
-}
-/* tablet or medium devices */
-@media screen and (min-width: 576px) and (max-width: 960px){
-    header{
-        padding: 50px;
-    }   
-    nav {
-         flex-direction: column;
-    }
-}
 /* Main section styles */
 main{
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 70px auto;
 }
 /* teams style */
 .teams-container{
@@ -111,11 +93,41 @@ main{
 .teams-title{
     font-size: 2.8rem;
 }
-.teams-title .quick-list{
-    color: #727272;
+.teams-title .quick-list{    
     font-weight: 500;
 }
 .teams-title .text-features{
     color: #FF900E;
     font-weight: 700;
+}
+
+/* Responsive media queries*/
+/*  mobile devices */
+@media screen and (max-width: 576px) {
+    header{
+        padding: 20px;
+    }   
+    nav, 
+    .teams-container {
+        flex-direction: column;
+    }
+    .teams-img-container{
+        grid-template-columns: 1fr; /* ekhane kono repeat lekhar dorkar nai. just ekta fraction diye dile holo*/
+    }
+    .teams-content{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+/* tablet or medium devices */
+@media screen and (min-width: 576px) and (max-width: 960px){
+    header{
+        padding: 50px;
+    }   
+    nav {
+         flex-direction: column;
+    }
+    .teams-container{
+        flex-direction: column-reverse;
+    }
 }
